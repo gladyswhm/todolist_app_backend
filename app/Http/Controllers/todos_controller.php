@@ -38,7 +38,7 @@ class todos_controller extends Controller
     {
         $update_todo = todos_model::findOrFail($id);
         $update_todo->update([
-            'description' => $request->description,
+            'description' => $request->description ?? $update_todo->description,
             'status' => $request->status,
         ]);
         return $update_todo;
