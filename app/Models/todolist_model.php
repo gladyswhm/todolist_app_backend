@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\todos_model;
 use Illuminate\Database\Eloquent\Model;
 
 class todolist_model extends Model
@@ -10,6 +11,6 @@ class todolist_model extends Model
     protected $fillable = ['titlename'];
     public function todos()
     {
-        return $this->hasMany(Todo::class, 'todolistID'); //relationship: one list has many to do items
+        return $this->hasMany(todos_model::class, 'todolistID'); //relationship: one list has many to do items
     }
 }
