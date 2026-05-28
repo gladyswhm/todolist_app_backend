@@ -1,3 +1,5 @@
+//database table for the different lists created
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('todolist', function (Blueprint $table) {
             $table->id();
+            $table->string('titlename');
             $table->timestamps();
         });
     }
